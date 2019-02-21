@@ -1,0 +1,38 @@
+.welcome {
+  font-family: "BAZAR";
+  margin: 0 auto;
+  width: 100vw;
+  min-height: 100vh;
+  height: 100%;
+  text-align: center;
+  background-color: #4e5258;
+  color: #f6edd8;
+}
+
+p {
+  margin-top: 0px;
+}
+
+h1 {
+  font-size: 100px;
+  height: fit-content;
+  margin: 0px;
+  padding-top: 70px;
+}
+
+h3 {
+  font-size: 30px;
+  letter-spacing: 2px;
+  margin-top: 50px;
+}
+
+.signIn {
+  margin-top: 150px;
+  font-size: 40px;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #f6edd8;
+}
