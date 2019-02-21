@@ -63,7 +63,16 @@ class Portfolio extends Component {
 
   render() {
     if (this.state.isLoaded === false) {
-      return <h1>Loading...</h1>;
+      return (
+        <div className="PortfolioLoaderContainer">
+          <div class="container">
+            <div class="dash uno" />
+            <div class="dash dos" />
+            <div class="dash tres" />
+            <div class="dash cuatro" />
+          </div>
+        </div>
+      );
     }
     return (
       <React.Fragment>

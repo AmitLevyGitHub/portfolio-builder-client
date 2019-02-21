@@ -93,7 +93,7 @@ a {
 }
 
 .navItem a {
-  font-family: var(--mainFont);
+  font-family: "Oswald", sans-serif;
   font-size: 2.2vw;
   color: #f9ebd9;
   padding: 0 5vw;
@@ -109,7 +109,7 @@ a {
   width: 100%;
   height: auto;
   min-height: calc(100vh - 8vw);
-  font-family: var(--mainFont);
+  font-family: "Oswald", sans-serif;
   color: #fff;
   padding-top: 10vw;
   text-align: center;
@@ -157,7 +157,7 @@ a {
 /* ABOUT SECTION */
 
 #aboutSection {
-  font-family: var(--mainFont);
+  font-family: "Oswald", sans-serif;
   background: var(--about-bcg);
   width: 100%;
   min-height: calc(100vh - 8vw);
@@ -235,7 +235,7 @@ a {
   width: 100%;
   height: 100vh;
   min-height: calc(100vh - 8vw);
-  font-family: var(--mainFont);
+  font-family: "Oswald", sans-serif;
   color: #fff;
   padding-top: 10vw;
   text-align: center;
@@ -284,7 +284,7 @@ a {
   background: var(--slider-bcg);
   width: 100%;
   height: 100vh;
-  font-family: var(--mainFont);
+  font-family: "Oswald", sans-serif;
   color: #000;
   padding-top: 3vw;
 }
@@ -302,7 +302,7 @@ a {
 .nextbtn {
   position: fixed;
   bottom: 12vh;
-  font-family: var(--mainFont);
+  font-family: "Oswald", sans-serif;
   font-size: 1.2vw;
   color: #fff;
   width: 10%;
@@ -311,4 +311,8 @@ a {
   border: 2px solid #fff;
   border-radius: 5px;
   background: transparent;
+}
+
+.PortfolioLoaderContainer {
+  background-color: #78bbbb;
 }

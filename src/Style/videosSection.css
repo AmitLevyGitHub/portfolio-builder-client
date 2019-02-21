@@ -1,5 +1,5 @@
 #videosSection {
-  font-family: "Oswald";
+  font-family: "Oswald" !important;
   background-color: #e68966;
   min-height: 100vh;
   height: 100%;

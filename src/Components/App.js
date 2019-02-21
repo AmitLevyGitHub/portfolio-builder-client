@@ -3,6 +3,7 @@ import WelcomePage from "./WelcomePage";
 import FormQuestions from "./questions/FormQuestions";
 import VideoSelection from "./VideoSelection/VideoSelection";
 import Portfolio from "./showProfile/Portfolio";
+import CancelledPage from "./Cancelled";
 
 class App extends Component {
   constructor(props) {
@@ -12,7 +13,11 @@ class App extends Component {
   }
 
   onUpdate = (userId, singedIn) => {
-    console.log(singedIn);
+    if (singedIn === "error" || userId === "error") {
+      this.setState({
+        componentToRender: 4
+      });
+    }
     if (singedIn === "false") {
       this.setState({
         userId: userId,
@@ -37,8 +42,6 @@ class App extends Component {
   };
 
   render() {
-    console.log(this.state.componentToRender);
-
     if (this.state.componentToRender === 0)
       return <WelcomePage onUpdate={this.onUpdate} />;
     else if (this.state.componentToRender === 1)
@@ -57,8 +60,7 @@ class App extends Component {
       );
     } else if (this.state.componentToRender === 3)
       return <Portfolio userId={this.state.userId} />;
-
-    // return <div className="App" />;
+    else if (this.state.componentToRender === 4) return <CancelledPage />;
   }
 }
 

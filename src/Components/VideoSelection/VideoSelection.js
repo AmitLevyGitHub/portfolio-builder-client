@@ -10,7 +10,8 @@ export default class VideoSelection extends React.Component {
     this.state = {
       videos: [],
       UserId: this.props.userId,
-      selectedVideos: []
+      selectedVideos: [],
+      isLoaded: false
     };
   }
 
@@ -42,7 +43,8 @@ export default class VideoSelection extends React.Component {
                   description: data.description,
                   thumbnail: data.thumbnail
                 });
-              });
+              })
+              .then(this.setState({ isLoaded: true }));
           });
         })
         .catch(err => console.log(err));
@@ -131,10 +133,24 @@ export default class VideoSelection extends React.Component {
   };
 
   render() {
+    if (this.state.isLoaded === false) {
+      return (
+        <div className="formContainer">
+          <div class="container">
+            <div class="dash uno" />
+            <div class="dash dos" />
+            <div class="dash tres" />
+            <div class="dash cuatro" />
+          </div>
+        </div>
+      );
+    }
     if (!this.state.selectedVideos.length) {
       return (
         <div className="formContainer">
-          <h1 className="sectionTitle">Choose your 4 favorite Videos</h1>
+          <h1 className="videosSelection">
+            PLEASE CHOOSE YOUR 4 FAVORITE VIDEOS
+          </h1>
           <form onSubmit={this.handleFormSubmit}>
             <div className="form">
               {this.state.videos.map(this.createCheckbox)}

@@ -3,9 +3,7 @@ import "../Style/WelcomePage.css";
 
 export default class WelcomePage extends React.Component {
   update = () => {
-    console.log(window.location);
     let location = window.location.href;
-    console.log(location);
     location = location.split("&");
     let UserId = location[0].split("=")[1],
       sigendIn = location[1].split("=")[1];
@@ -14,7 +12,6 @@ export default class WelcomePage extends React.Component {
   };
 
   componentWillMount() {
-    console.log("checking");
     if (
       window.location.href !==
       "http://shenkar.html5-book.co.il/2018-2019/dcs/dev_276/"
@@ -32,6 +29,9 @@ export default class WelcomePage extends React.Component {
           <a href="https://portfolio-builder-server-side.herokuapp.com/">
             CLICK HERE
           </a>
+          <div className="moustacheToMove">
+            <div className="moustache" />
+          </div>
         </div>
       </div>
     );
